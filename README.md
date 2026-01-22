@@ -1,65 +1,93 @@
-# MTGProject
+MTG Meta Analysis (Python + SQL)
+Overview
 
-![image](https://github.com/user-attachments/assets/2af0ca96-3c21-4cb5-a355-1adb0b74795e)
+This project analyzes Magic: The Gathering (MTG) card/meta trends using Python + SQL.
+It focuses on extracting insights from card frequency data and generating visual outputs to highlight patterns in the evolving MTG meta.
+
+Features
+
+Data Processing (ETL-style workflow): Loads and transforms MTG card frequency data for analysis.
+
+SQL Aggregations: Uses SQL queries to calculate card counts and frequency-based metrics.
+
+Analysis + Insights: Computes summary statistics and trends from the dataset.
+
+Visualization: Generates charts/outputs to communicate results clearly.
+
+Technologies Used
+
+Python
+
+SQL
+
+Pandas / NumPy
+
+Matplotlib (or update this to what you actually used)
+
+Project Structure
+
+Main.py — main entry point (runs the analysis workflow)
+
+Transfer.py — helper script for data transformation/loading
+
+Cardcount.sql — SQL query logic for aggregation
+
+cardfrequency.csv — dataset used for analysis
+
+BiasedTest.py — experimental/testing script
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
 
 
+Navigate to the project directory:
 
-## Overview
-MTGProject is a data analysis project focused on analyzing and visualizing Magic: The Gathering (MTG) card data. The project leverages ETL pipelines, statistical analysis, and visualization techniques to gain insights into MTG card attributes, rarity distributions, and game mechanics.
+cd REPO_NAME
 
-## Features
-- **Data Extraction**: Collects MTG card data from official APIs and other sources.
-- **Data Transformation**: Cleans, normalizes, and structures the data for analysis.
-- **Data Analysis**: Performs statistical analysis on card attributes, color distributions, and trends over time.
-- **Visualization**: Generates charts and graphs to highlight key findings.
 
-## Technologies Used
-- **Programming Language**: Python
-- **Data Processing**: Pandas, NumPy
-- **Visualization**: Matplotlib, Seaborn
-- **APIs**: MTGGoldfish API (for card data retrieval)
+(Optional) Create and activate a virtual environment:
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/mtgproject.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd mtgproject
-   ```
-3. Create and activate a virtual environment (optional but recommended):
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
-4. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-## Usage
-1. Run the data extraction script:
-   ```sh
-   python extract_data.py
-   ```
-2. Process the data:
-   ```sh
-   python transform_data.py
-   ```
-3. Perform analysis and generate visualizations:
-   ```sh
-   python analyze_data.py
-   ```
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request if you'd like to add new features or fix bugs.
+Install dependencies:
 
-## License
+pip install -r requirements.txt
+
+Usage
+
+Run the project with:
+
+python Main.py
+
+Output
+
+This project produces visualizations and summary insights such as:
+
+Most frequently occurring cards
+
+Distribution trends based on frequency data
+
+Aggregated metrics from SQL queries
+
+(See the included screenshot in this repo.)
+
+Next Improvements
+
+Add a FastAPI API layer to expose results through endpoints
+
+Add unit tests for analysis functions
+
+Containerize with Docker for easy setup
+
+License
+
 This project is licensed under the MIT License.
 
-## Contact
-For any questions or suggestions, feel free to reach out via GitHub or email.
+Contact
 
----
-Let me know if you want to add more details like specific ETL pipeline steps o
+For questions or suggestions, feel free to reach out via GitHub.
