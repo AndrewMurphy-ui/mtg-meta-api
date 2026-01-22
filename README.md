@@ -1,5 +1,15 @@
 # MTG Meta Analysis (Python + SQL)
 
+<img width="1305" height="721" alt="image" src="https://github.com/user-attachments/assets/689a2cd9-af24-4602-81da-af4d0c901bd1" />
+
+
+
+
+
+
+
+
+
 ## Overview
 This project analyzes **Magic: The Gathering (MTG)** card/meta trends using **Python + SQL**.  
 It focuses on extracting insights from card frequency data and generating visual outputs to highlight patterns in the evolving MTG meta.
