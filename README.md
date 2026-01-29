@@ -1,29 +1,99 @@
-# MTG Meta Analysis (Python + SQL)
+### MTG Meta API
 
-## Overview
-This project analyzes **Magic: The Gathering (MTG)** card/meta trends using **Python + SQL**.  
-It focuses on extracting insights from card frequency data and generating visual outputs to highlight patterns in the evolving MTG meta.
+### Overview
+MTG Meta API is a Python-based **backend API** for analyzing **Magic: The Gathering (MTG)** meta data.
 
-## Features
-- **Data Processing (ETL-style workflow)**: Loads and transforms MTG card frequency data for analysis.
-- **SQL Aggregations**: Uses SQL queries to calculate card counts and frequency-based metrics.
-- **Analysis + Insights**: Computes summary statistics and trends from the dataset.
-- **Visualization**: Generates charts/outputs to communicate results clearly.
+The project is evolving from an offline data-analysis script into a **service-oriented backend system**.  
+It processes MTG card or deck frequency data and exposes meta statistics through **HTTP API endpoints** that can be consumed by other tools or services.
 
-## Technologies Used
-- **Python**
-- **SQL**
-- **Pandas / NumPy**
-- **Matplotlib** 
+This repository focuses on backend engineering fundamentals such as clear project structure, separation of concerns, API contracts, and reproducible workflows.
 
-## Project Structure
-- `Main.py` — main entry point (runs the analysis workflow)
-- `Transfer.py` — helper script for data transformation/loading
-- `Cardcount.sql` — SQL query logic for aggregation
-- `cardfrequency.csv` — dataset used for analysis
-- `BiasedTest.py` — experimental/testing script
+---
 
-## Installation
-1. Clone the repository:
-```sh
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+### What This Project Does (Current State)
+At its current stage, the project provides:
+
+- A structured Python codebase prepared for backend development
+- A FastAPI application with a health check endpoint
+- Modular analysis and data-processing logic ready to be exposed via APIs
+- Clear separation between application code, scripts, data, SQL, and tests
+
+This establishes the foundation for a production-style backend service.
+
+---
+
+### Planned Capabilities (In Progress)
+The intended backend workflow is:
+
+1. MTG data (decklists or frequency data) is ingested  
+2. Data is validated and normalized  
+3. Meta statistics (card frequency, trends) are computed  
+4. Results are stored and reused  
+5. Clients retrieve results via API endpoints or exports  
+
+Planned features include:
+- Meta statistics endpoints (e.g. `/meta/cards`, `/meta/archetypes`)
+- Persistent storage using a database
+- Background processing for analysis jobs
+- CLI client for automation
+- Automated testing and CI improvements
+
+---
+
+### API Overview
+
+#### Health Check
+GET /health
+
+**Response**
+```json
+{
+  "status": "ok"
+}
+
+### Project Structure
+mtg-meta-api/
+├─ app/                # Application code (API, core logic)
+│  ├─ main.py          # FastAPI entry point
+│  └─ transfer.py
+├─ scripts/            # Runner scripts / legacy entry points
+│  └─ run_analysis.py
+├─ data/               # Sample or static datasets
+│  └─ cardfrequency.csv
+├─ sql/                # Raw SQL queries
+│  └─ cardcount.sql
+├─ tests/              # Test files
+│  └─ test_bias.py
+├─ requirements.txt    # Python dependencies
+└─ README.md
+
+
+### Getting Started
+
+#### Requirements
+- Python 3.9+
+- pip
+
+#### Installation
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+The API will be available at:
+
+http://127.0.0.1:8000/health
+
+http://127.0.0.1:8000/docs
+
+
+### Design Philosophy
+This project prioritizes:
+- Backend correctness over UI
+- Clear system boundaries
+- Automation-friendly workflows
+- Incremental evolution from scripts to services
+
+No frontend is required to demonstrate backend capability.
+### Status
+🚧 Active development
+### License
+MIT License
