@@ -1,4 +1,4 @@
-### MTG Meta API
+### mtg-archetype-trends-api
 
 ### Overview
 MTG Meta API is a Python-based **backend API** for analyzing **Magic: The Gathering (MTG)** meta data.
@@ -43,15 +43,21 @@ Planned features include:
 ### API Overview
 
 #### Health Check
+```
 GET /health
+```
 
 **Response**
 ```json
 {
   "status": "ok"
 }
+```
+
+---
 
 ### Project Structure
+```text
 mtg-meta-api/
 ├─ app/                # Application code (API, core logic)
 │  ├─ main.py          # FastAPI entry point
@@ -66,7 +72,9 @@ mtg-meta-api/
 │  └─ test_bias.py
 ├─ requirements.txt    # Python dependencies
 └─ README.md
+```
 
+---
 
 ### Getting Started
 
@@ -77,13 +85,19 @@ mtg-meta-api/
 #### Installation
 ```bash
 pip install -r requirements.txt
+```
+
+#### Run the API Locally
+```bash
 uvicorn app.main:app --reload
+```
+
 The API will be available at:
 
-http://127.0.0.1:8000/health
+http://127.0.0.1:8000/health  
+http://127.0.0.1:8000/docs  
 
-http://127.0.0.1:8000/docs
-
+---
 
 ### Design Philosophy
 This project prioritizes:
@@ -93,7 +107,14 @@ This project prioritizes:
 - Incremental evolution from scripts to services
 
 No frontend is required to demonstrate backend capability.
+
+---
+
 ### Status
 🚧 Active development
+
+---
+
 ### License
 MIT License
+
