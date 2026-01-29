@@ -1,5 +1,5 @@
 ### mtg-archetype-trends-api
-
+file:///C:/Users/andre/Downloads/ChatGPT%20Image%20Jan%2029,%202026,%2009_19_44%20PM.png
 ### Overview
 MTG Meta API is a Python-based **backend API** for analyzing **Magic: The Gathering (MTG)** meta data.
 
