@@ -82,13 +82,13 @@ Example responses:
 {
   "status": "ok",
   "confidence": "high",
-  "results": { ... }
+  "results": {}
 }
 {
   "status": "warn",
   "confidence": "low",
   "reason": "insufficient sample size (18 decks)",
-  "results": { ... }
+  "results": {}
 }
 {
   "status": "fail",
